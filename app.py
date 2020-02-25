@@ -39,10 +39,11 @@ def estimate():
         # print(totalLaborCost)
 
         totalBidPrice = totalMaterialCost + totalLaborCost
-        print(totalBidPrice)
+        #print(totalBidPrice)
+        estimate = "The estimate for the tank is ${0:,.2f}".format(totalBidPrice)
 
-
-
+        return render_template('estimate.html', display=estimate, pageTitle='Tank Painting Estimate')
+    
     return render_template('estimate.html', pageTitle='Tank Painting Estimate')
 
 if __name__ == '__main__':
